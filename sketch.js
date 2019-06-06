@@ -7,7 +7,7 @@ var angle = 0.4;
 var xoff =0;
 var yoff=0;
 function setup() {
-  var canvas = createCanvas(displayWidth, displayHeight*0.77);
+  var canvas = createCanvas(windowWidth, windowHeight*0.77);
   canvas.parent('sketch-div');
   background(132);
 
@@ -18,7 +18,7 @@ function setup() {
 function draw() {
   background(136,189,188);
   if(mouseY>0&&mouseY<height) {
-    angle = atan(constrain(mouseX - displayWidth / 2, -displayWidth, displayWidth) / constrain(mouseY - height, -displayHeight, displayHeight));
+    angle = atan(constrain(mouseX - windowWidth / 2, -windowWidth, windowWidth) / constrain(mouseY - height, -windowHeight, windowHeight));
     angle = constrain(abs(angle),0.3,3);
   }
 
@@ -27,7 +27,7 @@ function draw() {
 
 
   strokeWeight(15);
-  translate(displayWidth/2, height);
+  translate(windowWidth/2, height);
   branch(130);
 
 
