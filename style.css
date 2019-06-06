@@ -1,0 +1,318 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vh;
+}
+body{
+    margin: 0;
+}
+hr{
+    flex: 0 1 100vw;
+}
+#logo{
+    width: 10vw;
+    height: 5vh;
+    background-color: darkblue;
+}
+.center{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    min-width: 80vw;
+}
+.left-align{
+    text-align: left;
+}
+.right-align{
+    text-align: right;
+}
+.navMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.fc{
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.fc > *{
+    flex:1;
+}
+h2{
+    margin:0;
+    font-size: 3.5vh;
+}
+.fc header,
+.fc footer,
+.fc nav{
+    flex: 0 1 100vw;
+    font-size: 2.5vh;
+}
+
+.fc header{
+    height: 8vh;
+    align-items: center;
+    background-color: white;
+    padding-top: 2vh;
+}
+.fc nav{
+    height: 5vh;
+    background-color: #254E58;
+    color: white;
+}
+.fc footer{
+    background-color: #112D32;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    font-size: 2vh;
+
+}
+.fc footer a{
+    font-family: 'Merriweather', serif;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.fc footer ul{
+    margin-top: 5vh;
+    flex:1;
+    max-width: 10vw;
+
+}
+.fc footer p{
+    flex: 0 1 100vw;
+    text-align: center;
+}
+.sticky ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-content: center;
+    margin:0;
+}
+hr{
+    margin: 20px;
+}
+.sticky ul li{
+padding-left: 1vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.sticky ul li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.sticky ul li:hover{
+    color: lightgray;
+    padding-left: 1vw;
+}
+.fc #main-banner{
+    margin-top: 15vh;
+    flex: 0 1 100vw;
+    overflow: hidden;
+    background-size: cover;
+    min-height: 87vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+.fc #main-banner #main-banner-pane{
+    color: white;
+    font-size: 2.8vh;
+    background-color: #272727;
+    opacity: 0.98;
+    flex: 0 1 30vw;
+    padding: 30px;
+}
+.fc #main-banner #main-banner-pane *{
+    opacity: 1.0;
+}
+.fc #statement{
+    font-size: 2vh;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 1 100vw;
+    justify-content: center;
+
+}
+.fc #statement blockquote{
+    font-family: 'Merriweather', serif;
+}
+.fc #statement p{
+
+    max-width: 100vw;
+}
+.fc #infographic{
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 100vw;
+    background-color: #88BDBC;
+    align-items: center;
+}
+.fc #infographic section{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 1 100vw;
+}
+.img-box{
+    flex:1 1;
+    margin: 5vh;
+
+}
+.img-box img{
+    height: auto;
+    width: 25vw;
+}
+.box-side{
+    color: white;
+    flex:2 1;
+    margin: 4vw;
+    font-size: 3vh;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.fc #slider{
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.fc #slider h2{
+    flex: 3 1 100vw;
+    text-align: center;
+}
+.fc #slider p {
+    flex: 3 1 100vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    text-align: left;
+}
+.fc #slider .slider-box{
+    height: 30vh;
+    max-width: 20vw;
+    flex: 1 1;
+    margin: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.fc #slider .slider-box:hover{
+    transform: scale(1.2);
+}
+.fc #slider .slider-box img{
+    height: 30vh;
+    width: 20vw;
+}
+
+.round-button{
+    width: 30px;
+    height: 30px;
+    background-color: #112D32;
+    border-radius: 15px;
+    max-width: 3vw;
+    margin: 2vw;
+    opacity: 1;
+    cursor: pointer;
+}
+.round-button:hover{
+    opacity: 0.5;
+}
+#dashboardContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+#overviewContainer{
+    margin-top: 15vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.item-box{
+    flex: 1 1;
+    height: 20vw;
+    width: 20vw;
+    background-size: cover;
+    border: 1px solid black;
+    margin: 20px;
+    display:flex;
+    flex-flow: row;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.9;
+
+}
+.item-box:hover{
+    opacity: 1;
+}
+.item-box-header{
+    flex: 3 1;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+}
+
+.pane{
+    display: flex;
+    background-color: #88BDBC;
+    opacity: 0.9;
+    margin:0;
+    flex: 1 0;
+    padding: 10px;
+    max-height: 10vh;
+    font-family: 'Merriweather', serif;
+}
+.pane-description{
+    color: white;
+    flex: 2 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-family: inherit;
+    opacity: 1;
+    font-size: 2vh;
+}
+.pane-author{
+    opacity: 1;
+    font-family: inherit;
+    font-weight: bold;
+    flex:0 1;
+    align-items: flex-end;
+    display: flex;
+    flex-flow: row;
+}
+
+#about{
+    color: white;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-top: 15vh;
+    max-width: 100vw;
+    padding-top: 50vh;
+    height: 35vh;
+}
+
+
+

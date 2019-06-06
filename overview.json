@@ -1,0 +1,20 @@
+{
+  "department": {
+    "Name": "Department",
+    "Description": "Grade distribution overview by department and school for semester of 2019 Fall.",
+    "ImageLocation": "resources/department.jpg",
+    "Author": "B.Byambaa"
+  },
+  "courses": {
+    "Name": "Courses",
+    "Description": "Grade distribution for semester of 2019 Fall.",
+    "ImageLocation": "resources/courses.jpg",
+    "Author": "B.Byambaa"
+  },
+  "programs": {
+    "Name": "Programs",
+    "Description": "Major selection demand for semester of 2019 Fall.",
+    "ImageLocation": "resources/programs.jpg",
+    "Author": "B.Byambaa"
+  }
+}

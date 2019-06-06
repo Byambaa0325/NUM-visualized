@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a data analysis website">
+    <title>Data Visualized</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+    <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="SPA.js"></script>
+    <script src="overview.js"></script>
+</head>
+<body>
+
+<div class="fc">
+    <div class="sticky">
+        <header>
+            <div class="center navMenu">
+                <div onclick="showPage('home')" id="logo" style="cursor: pointer"></div>
+                <ul>
+                    <li><a href="http://data.num.edu.mn/">Data Source</a></li>
+                    <li><a href="https://public.tableau.com/profile/byambaa.bayarmandakh#!/">Tools</a></li>
+                    <li><a onclick="showPage('about')">About</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav>
+            <div class="center navMenu">
+                <h2 onclick="showPage('home')" style="cursor: pointer">Home</h2>
+                <ul>
+                    <li><a onclick="buildOverview('overviewContainer')">Overview</a></li>
+                    <li ><a onclick="showPage('dashboard-courses')">Courses</a></li>
+                    <li ><a onclick="showPage('dashboard-programs')">Programs</a></li>
+                    <li ><a onclick="showPage('dashboard-department')">Schools</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="home" >
+        <div id="main-banner">
+            <div id="sketch-div" style="z-index: -1; position: absolute;"></div>
+            <aside id="main-banner-pane">
+                <h3>Өгөгдөлд суурилсан шийдвэр</h3>
+                <p>Оюутан та суралцах хугацаандаа маш олон шийдвэр гаргадаг хичээл сонголт, хөтөлбөр сонголт, тандалт гэх мэт. Тэгвэл бусдаас асууж сураглалгүйгээр нээлттэй өгөгдлөөс хэрэгтэй мэдээллээ олж аваарай. </p>
+            </aside>
+        </div>
+        <hr>
+        <div id="statement" class="center">
+            <blockquote>“Data beats emotions.”
+            </blockquote>
+            <p>– Sean Rad</p>
+        </div>
+        <hr>
+        <div id="infographic" class ='center'>
+
+            <section class="center">
+                <div class="img-box"><img src="resources/dataNUMlogo.png" alt="data num edu mn logo"></div>
+                <div class="box-side right-align">Өгөгдөл<br>МУИС нь 2018 оноос өөрсдийн нээлттэй өгөгдлийг хөгжүүлэх ажлыг санаачлан хэрэгжүүлж эхэлсэн бөгөөд энэ порталаар дамжуулж албан ёсны эх сурвалжаас төрөл бүрийн өгөгдлийг олон нийтэд түгээж байна. Энэ санаачлагаар Монгол Улсад анх удаа дээд боловсролын байгууллага өөрсдийн үйл ажиллагааны талаарх өгөгдлийг нээж харуулсан сайн жишээ, түүчээ болж байна.
+                </div>
+            </section>
+
+            <section class="center">
+                <div class="box-side left-align">Дүрслэл<br>Tableau Public is a free service that lets anyone publish interactive data visualizations to the web. Visualizations that have been published to Tableau Public (“vizzes”) can be embedded into web pages and blogs, they can be shared via social media or email, and they can be made available for download to other users.
+                </div>
+                <div class="img-box"><img src="resources/tableaupubliclogo.png" alt="pie chart"></div>
+            </section>
+        </div>
+
+
+        <div id="slider" class="center">
+            <h2>Featured Visualizations</h2>
+
+            <div class="slider-box"><a onclick="showPage('dashboard-courses')"><img src="resources/courses.png"></a></div>
+            <div class="slider-box"><a onclick="showPage('dashboard-programs')"><img src="resources/programs.png"></a></div>
+            <div class="slider-box"><a onclick="showPage('dashboard-department')"><img src="resources/department.png"></a></div>
+            <p>For a long time I used to go to bed early. Sometimes, when I had put out my candle, my eyes would close
+                so quickly that I had not even time to say "I'm going to sleep."</p>
+
+        </div>
+
+    </div>
+
+    <div id="overviewContainer" class="center" style="display: none">
+        <div class="item-box">
+            <div class="item-box-header">
+                Dashboard
+            </div>
+            <div class="pane">
+                <div class="pane-description"> Lorem ipsum dolor sit amet blah blah blah</div>
+                <div class="pane-author">Byambaa</div>
+            </div>
+
+        </div>
+        <div class="item-box">
+            <div class="item-box-header">
+                Dashboard
+            </div>
+            <div class="pane">
+                <div class="pane-description"> Lorem ipsum dolor sit amet blah blah blah</div>
+                <div class="pane-author">Byambaa</div>
+            </div>
+
+        </div>
+        <div class="item-box">
+            <div class="item-box-header">
+                Dashboard
+            </div>
+            <div class="pane">
+                <div class="pane-description"> Lorem ipsum dolor sit amet blah blah blah</div>
+                <div class="pane-author">Byambaa</div>
+            </div>
+
+        </div>
+        <div class="item-box">
+            <div class="item-box-header">
+                Dashboard
+            </div>
+            <div class="pane">
+                <div class="pane-description"> Lorem ipsum dolor sit amet blah blah blah</div>
+                <div class="pane-author">Byambaa</div>
+            </div>
+
+        </div>
+        <div class="item-box">
+            <div class="item-box-header">
+                Dashboard
+            </div>
+            <div class="pane">
+                <div class="pane-description"> Lorem ipsum dolor sit amet blah blah blah</div>
+                <div class="pane-author">Byambaa</div>
+            </div>
+
+        </div>
+    </div>
+    <div id="about" class="center right-align" style="display: none">
+        This is a data visualization website made by Byambaa on 2019 for class Web Programming.<br>
+        Tel: +976 80818064<br>
+        E-Mail: 17B1NUM0662@stud.num.edu.mn<br>
+    </div>
+
+    <div id="dashboardContainer" >
+        <hr>
+
+    <div id="dashboard-courses" style="display: none">
+        <div class='tableauPlaceholder' id='viz1558948839376' style='position: relative; '>
+            <noscript><a href='#'><img alt=' '
+                                       src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NU&#47;NUMGradeDistributionfilter-fixed&#47;sheet6&#47;1_rss.png'
+                                       style='border: none'/></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+                <param name='embed_code_version' value='3'/>
+                <param name='site_root' value=''/>
+                <param name='name' value='NUMGradeDistributionfilter-fixed&#47;sheet6'/>
+                <param name='tabs' value='no'/>
+                <param name='toolbar' value='yes'/>
+                <param name='static_image'
+                       value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NU&#47;NUMGradeDistributionfilter-fixed&#47;sheet6&#47;1.png'/>
+                <param name='animate_transition' value='yes'/>
+                <param name='display_static_image' value='yes'/>
+                <param name='display_spinner' value='yes'/>
+                <param name='display_overlay' value='yes'/>
+                <param name="load-order" value="1"/>
+                <param name='display_count' value='yes'/>
+            </object>
+        </div>
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1558948839376');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '1266px';
+        vizElement.style.height = '695px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    </div>
+
+    <div id="dashboard-programs" style="display: none">
+        <div class='tableauPlaceholder' id='viz1558960831158' style='position: relative; '>
+            <noscript><a href='#'><img alt=' '
+                                       src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProgramDemand&#47;Sheet7&#47;1_rss.png'
+                                       style='border: none'/></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+                <param name='embed_code_version' value='3'/>
+                <param name='site_root' value=''/>
+                <param name='name' value='ProgramDemand&#47;Sheet7'/>
+                <param name='tabs' value='no'/>
+                <param name='toolbar' value='yes'/>
+                <param name='static_image'
+                       value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProgramDemand&#47;Sheet7&#47;1.png'/>
+                <param name='animate_transition' value='yes'/>
+                <param name='display_static_image' value='yes'/>
+                <param name='display_spinner' value='yes'/>
+                <param name='display_overlay' value='yes'/>
+                <param name='display_count' value='yes'/>
+            </object>
+        </div>
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1558960831158');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '1266px';
+        vizElement.style.height = '695px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+    <div id="dashboard-department" style="display: none">
+        <div class='tableauPlaceholder' id='viz1558955899925' style='position: relative;'>
+            <noscript><a href='#'><img alt=' '
+                                       src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NU&#47;NUMgradedistributionbydepartmentandschool&#47;sheet3&#47;1_rss.png'
+                                       style='border: none'/></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+                <param name='embed_code_version' value='3'/>
+                <param name='site_root' value=''/>
+                <param name='name' value='NUMgradedistributionbydepartmentandschool&#47;sheet3'/>
+                <param name='tabs' value='no'/>
+                <param name='toolbar' value='yes'/>
+                <param name='static_image'
+                       value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NU&#47;NUMgradedistributionbydepartmentandschool&#47;sheet3&#47;1.png'/>
+                <param name='animate_transition' value='yes'/>
+                <param name='display_static_image' value='yes'/>
+                <param name='display_spinner' value='yes'/>
+                <param name="load-order" value="3"/>
+                <param name='display_overlay' value='yes'/>
+                <param name='display_count' value='yes'/>
+            </object>
+        </div>
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1558955899925');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '1266px';
+        vizElement.style.height = '695px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+    </div>
+
+    <footer class="center">
+        <ul>
+            <li><a onclick="buildOverview('overviewContainer')">Overview</a></li>
+            <li ><a onclick="showPage('dashboard-courses')">Courses</a></li>
+            <li ><a onclick="showPage('dashboard-programs')">Programs</a></li>
+            <li ><a onclick="showPage('dashboard-department')">Schools</a></li>
+        </ul>
+        <ul>
+            <li><a href="http://data.num.edu.mn/">Data Source</a></li>
+            <li><a href="https://public.tableau.com/profile/byambaa.bayarmandakh#!/">Tools</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+        </ul>
+    </footer>
+</div>
+
+<script>
+    var activePage = "home";
+    showPage(activePage);
+</script>
+
+</body>
+</html>
