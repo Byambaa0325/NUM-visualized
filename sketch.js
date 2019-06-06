@@ -33,7 +33,9 @@ function draw() {
 
 
 }
-
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 function branch(len) {
   line(0, 0, 0, -len);
   translate(0, -len);
