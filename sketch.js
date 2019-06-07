@@ -21,9 +21,9 @@ function draw() {
 
 
 
-  strokeWeight(windowHeight/30);
+  strokeWeight(windowHeight/40);
   translate(windowWidth/2, height);
-  branch(windowHeight/4);
+  branch(windowHeight/6);
 
 
 
