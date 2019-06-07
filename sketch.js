@@ -2,7 +2,7 @@ var angle = 0.4;
 var xoff =0;
 var yoff=0;
 function setup() {
-  var canvas = createCanvas(windowWidth, windowHeight*0.77);
+  var canvas = createCanvas(windowWidth, windowHeight*0.87);
   canvas.parent('sketch-div');
   background(132);
 
@@ -29,7 +29,7 @@ function draw() {
 
 }
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight*0.77);
+  resizeCanvas(windowWidth, windowHeight*0.87);
 }
 function branch(len) {
   line(0, 0, 0, -len);
