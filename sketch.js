@@ -29,7 +29,7 @@ function draw() {
 
 }
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight*0.77);
 }
 function branch(len) {
   line(0, 0, 0, -len);
